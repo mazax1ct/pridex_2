@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
-  <title>Список. Вид для НЕ работников IT отдела все завявки (в работе)</title>
+  <title>Список. Вид для НЕ работников IT отдела Все заявки (завершенные)</title>
 
   <meta name="description" content="">
 
@@ -14,26 +14,13 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/style.css"/>
+  //= template/style.html
 </head>
 
 <body class="page">
-  <header style="height: 76px; flex-shrink: 0">
-    <div class="container">Шапка</div>
-  </header>
+  //= template/header.html
 
-  <div class="page-menu">
-    <div class="page-menu__inner container">
-      <a class="page-menu__link" href="#">
-        <span class="page-menu__link-title">Ассистенту</span>
-        <span class="page-menu__link-text">Напитки,<br> вызовы</span>
-      </a>
-      <a class="page-menu__link is-active" href="#">
-        <span class="page-menu__link-title">Заявки IT</span>
-        <span class="page-menu__link-text">Техническое проблемы<br> в офисе</span>
-      </a>
-    </div>
-  </div>
+  //= template/page-menu.html
 
   <div class="page-tab">
     <div class="container">
@@ -42,32 +29,25 @@
         <button class="tabs__button is-active" type="button">Все</button>
       </div>
 
-      <form class="search">
-        <input class="search__input" type="text" placeholder="Поиск по номеру заявки, исполнителю, типу, инициатору" value="">
-        <button class="search__submit" type="submit" title="Найти"></button>
-      </form>
+      //= template/search.html
 
       <p class="status-title">Статус</p>
       <div class="status-bar">
-        <button class="status-bar__status is-active" type="button">В работе</button>
+        <button class="status-bar__status" type="button">В работе</button>
         <button class="status-bar__status" type="button">Отмененные</button>
-        <button class="status-bar__status" type="button">Завершенные</button>
+        <button class="status-bar__status is-active" type="button">Завершенные</button>
+
+        <div style="margin-left: 16px;">Выпадающий список с оценками</div>
       </div>
 
       <table class="requests">
-        <colgroup>
-          <col>
-          <col>
-          <col>
-          <col>
-          <col width="100%">
-        </colgroup>
         <tr>
           <th>№</th>
           <th>Дата&nbsp;создания</th>
           <th>время&nbsp;в&nbsp;работе</th>
           <th>Исполнитель</th>
           <th>тип&nbsp;проблемы</th>
+          <th class="requests__column-width-270">Оценка</th>
         </tr>
         <tr>
           <td>12345</td>
@@ -82,7 +62,8 @@
               </div>
             </div>
           </td>
-          <td><p style="max-width: 65%">Проблемы с сетью не знаю, я куда-то нажал и оно само удалилось, ребят, очень прошу помогите</p></td>
+          <td><p>Проблемы с сетью не знаю, я куда-то нажал и оно само удалилось, ребят, очень прошу помогите</p></td>
+          <td class="requests__column-width-270"><img src="images/icons/mark-good.svg" alt="Хорошо" title="Хорошо"></td>
         </tr>
         <tr>
           <td>12345</td>
@@ -97,7 +78,8 @@
               </div>
             </div>
           </td>
-          <td><p style="max-width: 65%">Проблемы с сетью не знаю, я куда-то нажал и оно само удалилось, ребят, очень прошу помогите</p></td>
+          <td><p>Проблемы с сетью не знаю, я куда-то нажал и оно само удалилось, ребят, очень прошу помогите</p></td>
+          <td class="requests__column-width-270"><img src="images/icons/mark-bad.svg" alt="Плохо" title="Плохо"></td>
         </tr>
       </table>
     </div>

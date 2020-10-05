@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
-  <title>Список. Вид для сотрудника IT Мои заявки в работе</title>
+  <title>Список. Вид для сотрудника IT Все в работе</title>
 
   <meta name="description" content="">
 
@@ -14,39 +14,23 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/style.css"/>
+  //= template/style.html
 </head>
 
 <body class="page">
-  <header style="height: 76px; flex-shrink: 0">
-    <div class="container">Шапка</div>
-  </header>
+  //= template/header.html
 
-  <div class="page-menu">
-    <div class="page-menu__inner container">
-      <a class="page-menu__link" href="#">
-        <span class="page-menu__link-title">Ассистенту</span>
-        <span class="page-menu__link-text">Напитки,<br> вызовы</span>
-      </a>
-      <a class="page-menu__link is-active" href="#">
-        <span class="page-menu__link-title">Заявки IT</span>
-        <span class="page-menu__link-text">Техническое проблемы<br> в офисе</span>
-      </a>
-    </div>
-  </div>
+  //= template/page-menu.html
 
   <div class="page-tab">
     <div class="container">
       <div class="tabs">
         <button class="tabs__button" type="button">Без исполнителя</button>
-        <button class="tabs__button is-active" type="button">Мои заявки</button>
-        <button class="tabs__button" type="button">Все</button>
+        <button class="tabs__button" type="button">Мои заявки</button>
+        <button class="tabs__button is-active" type="button">Все</button>
       </div>
 
-      <form class="search">
-        <input class="search__input" type="text" placeholder="Поиск по номеру заявки, исполнителю, типу, инициатору" value="">
-        <button class="search__submit" type="submit" title="Найти"></button>
-      </form>
+      //= template/search.html
 
       <p class="status-title">Статус</p>
       <div class="status-bar">
@@ -65,15 +49,20 @@
           <th class="requests__column-width-270"></th>
         </tr>
         <tr>
-          <td>
-            <span class="request-number">12345 <span class="request-number__indicator request-number__indicator--status_1"></span> <span class="request-number__popover">Вам&nbsp;передали&nbsp;задачу</span></span>
-          </td>
+          <td>12345</td>
           <td>Сегодня, 11:45</td>
           <td>1ч, 5мин</td>
           <td>
+            <div class="person">
+              <div class="person__avatar"><img src="images/content/img_1.jpg" alt="alt"></div>
+              <div class="person__info">
+                <div class="person__name">Аристарх Матюшин</div>
+                <div class="person__feature">IT-специалист</div>
+              </div>
+            </div>
             <div class="person-chooser">
               <div class="person-chooser__placeholder">Передать другому</div>
-              <div class="person-chooser__dropdown is-open">
+              <div class="person-chooser__dropdown">
                 <p class="person-chooser__dropdown-title">Сотрудники IT-поддержки</p>
                 <div class="person-chooser__dropdown-item">
                   <div class="person">
@@ -131,6 +120,13 @@
           <td>Сегодня, 12:45</td>
           <td>45мин</td>
           <td>
+            <div class="person">
+              <div class="person__avatar"><img src="images/content/img_1.jpg" alt="alt"></div>
+              <div class="person__info">
+                <div class="person__name">Аристарх Матюшин</div>
+                <div class="person__feature">IT-специалист</div>
+              </div>
+            </div>
             <div class="person-chooser">
               <div class="person-chooser__placeholder">Передать другому</div>
               <div class="person-chooser__dropdown">
