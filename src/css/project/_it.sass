@@ -213,3 +213,152 @@
     height: 14px
     margin-right: 5px
     width: 14px
+
+.request-number
+  display: inline-block
+  position: relative
+  vertical-align: top
+
+  &:hover
+    .request-number__popover
+      display: block
+
+  &__indicator
+    border-radius: 50%
+    height: 8px
+    left: auto
+    position: absolute
+    top: -4px
+    right: -8px
+    width: 8px
+
+    &--status_1
+      background-color: var(--orangey-red)
+
+  &__popover
+    border-radius: 15px
+    box-shadow: 0 4px 8px 0 var(--navy-15)
+    background-color: #647180
+    color: #fff
+    display: none
+    font-size: 12px
+    font-weight: 500
+    line-height: 16px
+    left: 50%
+    position: absolute
+    padding: 8px 16px
+    top: -100%
+    transform: translate(-50%, -50%)
+
+    &::after
+      top: 100%
+      left: 50%
+      border: solid transparent
+      content: ''
+      height: 0
+      width: 0
+      position: absolute
+      pointer-events: none
+      border-color: rgba(100, 113, 128, 0)
+      border-top-color: #647180
+      border-width: 5px
+      margin-left: -5px
+
+.btn
+  border: none
+  border-radius: 6px
+  cursor: pointer
+  font-size: 14px
+  font-weight: 500
+  line-height: 19px
+  transition: background-color 0.3s
+
+  &--type_1
+    background-color: rgba(#00b359, 0.08)
+    color: var(--shamrock-two)
+    padding: 8px 16px
+
+    &:hover
+      background-color: rgba(0, 179, 89, 0.16)
+
+.person-chooser
+  position: relative
+
+  &__placeholder
+    border-radius: 6px
+    background-color: rgba(#007aff, 0.08)
+    color: var(--deep-sky-blue)
+    cursor: pointer
+    display: inline-block
+    font-size: 14px
+    font-weight: 500
+    line-height: 19px
+    padding: 8px 40px 8px 16px
+    position: relative
+    transition: background-color 0.3s
+    vertical-align: top
+
+    &::after
+      background-image: url("data:image/svg+xml,%3Csvg width='13' height='8' viewBox='0 0 13 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.80664 7.82422C7.0459 7.81738 7.26465 7.72852 7.44238 7.53711L12.6377 2.21875C12.7881 2.06836 12.8701 1.87695 12.8701 1.65137C12.8701 1.2002 12.5146 0.837891 12.0635 0.837891C11.8447 0.837891 11.6328 0.926758 11.4756 1.08398L6.81348 5.87598L2.1377 1.08398C1.98047 0.933594 1.77539 0.837891 1.5498 0.837891C1.09863 0.837891 0.743164 1.2002 0.743164 1.65137C0.743164 1.87695 0.825195 2.06836 0.975586 2.21875L6.17773 7.53711C6.3623 7.72852 6.56738 7.82422 6.80664 7.82422Z' fill='%23007AFF'/%3E%3C/svg%3E%0A")
+      background-position: 0 0
+      background-repeat: no-repeat
+      content: ''
+      height: 8px
+      left: auto
+      position: absolute
+      right: 16px
+      top: 50%
+      transform: translateY(-50%)
+      width: 13px
+
+    &:hover
+      background-color: rgba(#007aff, 0.16)
+
+  &__dropdown
+    border-radius: 2px
+    box-shadow: 0 4px 8px 0 var(--navy-15)
+    background-color: var(--white)
+    display: none
+    left: 0
+    min-width: 390px
+    position: absolute
+    padding: 16px 16px 16px 6px
+    top: 100%
+    transform: translateY(8px)
+    z-index: 1
+
+    &.is-open
+      display: block
+
+  &__dropdown-title
+    color: var(--dark-blue-grey-55)
+    font-size: 14px
+    font-weight: 600
+    line-height: 18px
+    margin-top: 0
+    margin-bottom: 8px
+    padding-left: 13px
+
+  &__dropdown-item
+    border-radius: 6px
+    cursor: pointer
+    position: relative
+    padding: 4px 36px 4px 6px
+    transition: background-color 0.3s
+
+    &::after
+      background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z' fill='%23007AFF' fill-opacity='0.08'/%3E%3Cpath d='M11.1901 10L7.77733 6.94673C7.40756 6.61591 7.40756 6.07893 7.77733 5.74811C8.14709 5.4173 8.74729 5.4173 9.11706 5.74811L13.2381 9.43505C13.5873 9.74749 13.5873 10.2533 13.2381 10.5649L9.11706 14.2519C8.74729 14.5827 8.14709 14.5827 7.77733 14.2519C7.40756 13.9211 7.40756 13.3841 7.77733 13.0533L11.1901 10Z' fill='%23007AFF'/%3E%3C/svg%3E%0A")
+      background-position: 0 0
+      background-repeat: no-repeat
+      content: ''
+      height: 20px
+      left: auto
+      position: absolute
+      right: 8px
+      top: 50%
+      transform: translateY(-50%)
+      width: 20px
+      z-index: 1
+
+    &:hover
+      background-color: rgba(#007aff, 0.08)

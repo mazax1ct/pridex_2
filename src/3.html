@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <title>Список. Вид для сотрудника IT Мои заявки в работе</title>
+
+  <meta name="description" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;800&display=swap" rel="stylesheet">
+
+  //= template/style.html
+</head>
+
+<body class="page">
+  //= template/sprite.html
+
+  <header style="height: 76px; flex-shrink: 0">
+    <div class="container">Шапка</div>
+  </header>
+
+  //= template/page-menu.html
+
+  <div class="page-tab">
+    <div class="container">
+      <div class="tabs">
+        <button class="tabs__button" type="button">Без исполнителя</button>
+        <button class="tabs__button is-active" type="button">Мои заявки</button>
+        <button class="tabs__button" type="button">Все</button>
+      </div>
+
+      //= template/search.html
+
+      <p class="status-title">Статус</p>
+      <div class="status-bar">
+        <button class="status-bar__status is-active" type="button">В работе</button>
+        <button class="status-bar__status" type="button">Отмененные</button>
+        <button class="status-bar__status" type="button">Завершенные</button>
+      </div>
+
+      <table class="requests">
+        <tr>
+          <th>№</th>
+          <th>Дата&nbsp;создания</th>
+          <th>время&nbsp;в&nbsp;работе</th>
+          <th>Исполнитель</th>
+          <th>тип&nbsp;проблемы</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td>
+            <span class="request-number">12345 <span class="request-number__indicator request-number__indicator--status_1"></span> <span class="request-number__popover">Вам&nbsp;передали&nbsp;задачу</span></span>
+          </td>
+          <td>Сегодня, 11:45</td>
+          <td>1ч, 5мин</td>
+          <td>
+            <div class="person-chooser">
+              <div class="person-chooser__placeholder">Выбрать исполнителя</div>
+              <div class="person-chooser__dropdown is-open">
+                <p class="person-chooser__dropdown-title">Сотрудники IT-поддержки</p>
+                <div class="person-chooser__dropdown-item">
+                  <div class="person">
+                    <div class="person__avatar"><img src="images/content/img_1.jpg" alt="alt"></div>
+                    <div class="person__info">
+                      <div class="person__name">Бессмертный Владислав (Вы)</div>
+                      <div class="person__feature">IT-специалист</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="person-chooser__dropdown-item">
+                  <div class="person">
+                    <div class="person__avatar"><img src="images/content/img_1.jpg" alt="alt"></div>
+                    <div class="person__info">
+                      <div class="person__name">Имя Фамиля</div>
+                      <div class="person__feature">IT-специалист</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="person-chooser__dropdown-item">
+                  <div class="person">
+                    <div class="person__avatar"><img src="images/content/img_1.jpg" alt="alt"></div>
+                    <div class="person__info">
+                      <div class="person__name">Имя Фамиля</div>
+                      <div class="person__feature">IT-специалист</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="person-chooser__dropdown-item">
+                  <div class="person">
+                    <div class="person__avatar"><img src="images/content/img_1.jpg" alt="alt"></div>
+                    <div class="person__info">
+                      <div class="person__name">Имя Фамиля</div>
+                      <div class="person__feature">IT-специалист</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="person-chooser__dropdown-item">
+                  <div class="person">
+                    <div class="person__avatar"><img src="images/content/img_1.jpg" alt="alt"></div>
+                    <div class="person__info">
+                      <div class="person__name">Имя Фамиля</div>
+                      <div class="person__feature">IT-специалист</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td><p>Проблемы с сетью не знаю, я куда-то нажал и оно само удалилось, ребят, очень прошу помогите</p></td>
+          <td><button class="btn btn--type_1" type="button">Завершить</button></td>
+        </tr>
+        <tr>
+          <td>12345</td>
+          <td>Сегодня, 12:45</td>
+          <td>45мин</td>
+          <td>
+            <div class="person-chooser">
+              <div class="person-chooser__placeholder">Выбрать исполнителя</div>
+              <div class="person-chooser__dropdown">
+                <p class="person-chooser__dropdown-title">Сотрудники IT-поддержки</p>
+                <div class="person-chooser__dropdown-item">
+                  <div class="person">
+                    <div class="person__avatar"><img src="images/content/img_1.jpg" alt="alt"></div>
+                    <div class="person__info">
+                      <div class="person__name">Бессмертный Владислав (Вы)</div>
+                      <div class="person__feature">IT-специалист</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="person-chooser__dropdown-item">
+                  <div class="person">
+                    <div class="person__avatar"><img src="images/content/img_1.jpg" alt="alt"></div>
+                    <div class="person__info">
+                      <div class="person__name">Имя Фамиля</div>
+                      <div class="person__feature">IT-специалист</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="person-chooser__dropdown-item">
+                  <div class="person">
+                    <div class="person__avatar"><img src="images/content/img_1.jpg" alt="alt"></div>
+                    <div class="person__info">
+                      <div class="person__name">Имя Фамиля</div>
+                      <div class="person__feature">IT-специалист</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="person-chooser__dropdown-item">
+                  <div class="person">
+                    <div class="person__avatar"><img src="images/content/img_1.jpg" alt="alt"></div>
+                    <div class="person__info">
+                      <div class="person__name">Имя Фамиля</div>
+                      <div class="person__feature">IT-специалист</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="person-chooser__dropdown-item">
+                  <div class="person">
+                    <div class="person__avatar"><img src="images/content/img_1.jpg" alt="alt"></div>
+                    <div class="person__info">
+                      <div class="person__name">Имя Фамиля</div>
+                      <div class="person__feature">IT-специалист</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td><p>Проблемы с сетью не знаю, я куда-то нажал и оно само удалилось, ребят, очень прошу помогите</p></td>
+          <td><button class="btn btn--type_1" type="button">Завершить</button></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>
