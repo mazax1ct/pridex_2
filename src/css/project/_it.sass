@@ -173,6 +173,10 @@
     line-height: 19px
     padding: 20px 15px
 
+    &:hover
+      .request-number__popover
+        display: block
+
   &__column-width-270
     @media(min-width: 1440px)
       min-width: 270px
@@ -198,6 +202,24 @@
     color: var(--navy)
     white-space: nowrap
 
+    img
+      margin-left: 8px
+      vertical-align: middle
+
+  &__status
+    border-radius: 2px
+    border: solid 1px var(--deep-sky-blue)
+    color: var(--deep-sky-blue)
+    display: inline-block
+    font-size: 13px
+    font-weight: 600
+    line-height: 14px
+    letter-spacing: 0.9px
+    padding: 2px
+    position: relative
+    top: -1px
+    vertical-align: middle
+
   &__feature
     color: var(--dark-blue-grey-55)
 
@@ -207,7 +229,8 @@
 .timer
   align-items: center
   color: var(--orangey-red)
-  display: flex
+  display: inline-flex
+  vertical-align: middle
   white-space: nowrap
 
   &::before
@@ -271,11 +294,6 @@
       border-width: 5px
       margin-left: -5px
 
-td
-  &:hover
-    .request-number__popover
-      display: block
-
 .btn
   border: none
   border-radius: 6px
@@ -284,6 +302,7 @@ td
   font-weight: 500
   line-height: 19px
   transition: background-color 0.3s
+  text-decoration: none
 
   &--type_1
     background-color: rgba(#00b359, 0.08)
@@ -291,7 +310,33 @@ td
     padding: 8px 16px
 
     &:hover
-      background-color: rgba(0, 179, 89, 0.16)
+      background-color: rgba(#00b359, 0.16)
+
+  &--type_2
+    align-items: center
+    background-color: rgba(#007aff, 0.08)
+    color: var(--deep-sky-blue)
+    display: inline-flex
+    padding: 4px 8px
+
+    &:hover
+      background-color: rgba(#007aff, 0.16)
+
+    img
+      margin-right: 4px
+
+  &--type_3
+    align-items: center
+    background-color: var(--deep-sky-blue)
+    color: #fff
+    display: inline-flex
+    padding: 16px
+
+    &:hover
+      background-color: darken(#007aff, 5%)
+
+    img
+      margin-right: 4px
 
 .person-chooser
   position: relative
@@ -375,3 +420,341 @@ td
 
     &:hover
       background-color: rgba(#007aff, 0.08)
+
+.card
+  background-color: var(--pale-grey)
+
+  &__body
+    padding-bottom: 56px
+
+  &__back-block
+    margin-bottom: 22px
+
+  &__title
+    font-size: 24px
+    font-weight: 600
+    line-height: 32px
+    margin-bottom: 32px
+
+  &__link
+    background-color: transparent
+    border: none
+    cursor: pointer
+    display: inline-block
+    height: 31px
+    margin-left: 18px
+    padding: 0
+    vertical-align: middle
+    width: 31px
+
+  &__info
+    border-top: 1px solid var(--marine-8)
+    border-bottom: 1px solid var(--marine-8)
+    display: flex
+    margin-bottom: 16px
+    padding-top: 16px
+    padding-bottom: 16px
+
+    & + .card__problem
+      margin-top: 24px
+
+  &__info-block
+    padding-right: 64px
+
+  &__status
+    align-items: center
+    display: flex
+    flex-wrap: wrap
+    font-size: 16px
+    font-weight: 600
+    line-height: 21px
+
+    &:not(:last-child)
+      margin-bottom: 18px
+
+    &--type_1
+      color: var(--deep-sky-blue)
+
+    &--type_2
+      color: var(--orangey-red)
+
+    &--type_3
+      color: var(--shamrock-two)
+
+  &__status-title
+    color: var(--dark-blue-grey-55)
+    margin-right: 8px
+
+  &__author-title
+    color: var(--dark-blue-grey-55)
+    font-size: 14px
+    font-weight: 600
+    line-height: 19px
+    margin-bottom: 6px
+    text-transform: uppercase
+
+  &__author
+    margin-bottom: 16px
+
+  &__info-feature
+    font-size: 16px
+    line-height: 21px
+
+    &:not(:last-child)
+      margin-bottom: 16px
+
+    span
+      color: var(--dark-blue-grey-55)
+      font-size: 14px
+      font-weight: 600
+      line-height: 19px
+      margin-right: 8px
+      text-transform: uppercase
+
+  &__actions
+    display: flex
+    margin-bottom: 16px
+
+    .btn
+      padding: 16px
+
+    .person-chooser__placeholder
+      padding: 16px 40px 16px 16px
+
+    .person-chooser,
+    .btn
+      margin-right: 8px
+
+  &__problem
+    background-color: var(--dark-blue-grey-4)
+    border-radius: 4px
+    padding: 16px 32px 16px 16px
+
+    &:not(:last-child)
+      margin-bottom: 32px
+
+    @media(min-width: 1400px)
+      width: 64.06779%
+
+  &__images
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: 10px
+
+    & > *
+      margin-bottom: 4px
+      margin-right: 4px
+
+    img
+      border-radius: 2px
+
+  &__problem-title
+    color: var(--dark-blue-grey-55)
+    font-size: 14px
+    font-weight: 600
+    line-height: 19px
+    margin-bottom: 8px
+    text-transform: uppercase
+
+  &__problem-text
+    font-size: 16px
+    font-weight: 500
+    line-height: 21px
+    margin-bottom: 16px
+
+    p
+      &:not(:last-child)
+        margin-bottom: 16px
+
+  &__problem-textarea
+    background-color: var(--white)
+    border: 1px solid var(--marine-8)
+    border-radius: 6px
+    box-shadow: inset 0 1px 4px 0 var(--dark-blue-grey-24)
+    display: block
+    font-size: 14px
+    height: 136px
+    line-height: 19px
+    max-width: 505px
+    margin-bottom: 16px
+    padding: 16px
+    resize: none
+    width: 100%
+
+    &::-webkit-input-placeholder
+      color: var(--dark-blue-grey-55)
+      opacity: 1
+
+    &::-moz-placeholder
+      color: var(--dark-blue-grey-55)
+      opacity: 1
+
+    &:-ms-input-placeholder
+      color: var(--dark-blue-grey-55)
+      opacity: 1
+
+  &__history-title
+    font-size: 24px
+    font-weight: 600
+    line-height: 32px
+    margin-top: 0
+    margin-bottom: 32px
+
+  &__history
+    @media(min-width: 1400px)
+      width: 62.71186%
+
+  &__history-subtitle
+    color: var(--dark-blue-grey-55)
+    font-size: 14px
+    font-weight: 600
+    line-height: 19px
+    margin-bottom: 8px
+    text-transform: uppercase
+
+  &__history-textarea
+    background-color: var(--white)
+    border: 1px solid var(--marine-8)
+    border-radius: 6px
+    box-shadow: inset 0 1px 4px 0 var(--dark-blue-grey-24)
+    display: block
+    font-size: 14px
+    height: 136px
+    line-height: 19px
+    margin-bottom: 16px
+    padding: 16px
+    resize: none
+    width: 100%
+
+    &::-webkit-input-placeholder
+      color: var(--dark-blue-grey-55)
+      opacity: 1
+
+    &::-moz-placeholder
+      color: var(--dark-blue-grey-55)
+      opacity: 1
+
+    &:-ms-input-placeholder
+      color: var(--dark-blue-grey-55)
+      opacity: 1
+
+.history-item
+  border-radius: 5px
+  border: solid 1px var(--marine-8)
+  padding: 16px
+  position: relative
+
+  &:not(:last-child)
+    margin-bottom: 16px
+
+  &__action
+    color: var(--dark-blue-grey-55)
+    font-size: 16px
+    line-height: 21px
+    margin-top: 16px
+
+    &:not(:last-child)
+      margin-bottom: 16px
+
+    a
+      color: var(--deep-sky-blue)
+      text-decoration: none
+
+    img
+      margin-left: 24px
+      vertical-align: middle
+
+  &__text
+    color: var(--navy)
+    font-size: 16px
+    line-height: 21px
+
+  &__buttons
+    align-items: center
+    display: flex
+    left: auto
+    position: absolute
+    right: 16px
+    top: 16px
+    z-index: 1
+
+  &__button
+    align-items: center
+    background-color: transparent
+    border: none
+    cursor: pointer
+    display: flex
+    height: 20px
+    justify-content: center
+    padding: 0
+    width: 20px
+
+    &:not(:last-child)
+      margin-right: 12px
+
+  .person__info
+    font-size: 16px
+    line-height: 21px
+
+.comment
+  border-radius: 5px
+  border: solid 1px var(--marine-8)
+  background-color: var(--white)
+  padding: 16px
+  position: relative
+
+  &:not(:last-child)
+    margin-bottom: 16px
+
+  &--answer
+    margin-left: 48px
+
+  &__action
+    color: var(--dark-blue-grey-55)
+    font-size: 16px
+    font-weight: 500
+    line-height: 21px
+    margin-top: 16px
+
+    &:not(:last-child)
+      margin-bottom: 16px
+
+    a
+      color: var(--deep-sky-blue)
+      text-decoration: none
+
+  &__text
+    color: var(--navy)
+    font-size: 16px
+    line-height: 21px
+
+  &__buttons
+    align-items: center
+    display: flex
+    left: auto
+    position: absolute
+    right: 16px
+    top: 16px
+    z-index: 1
+
+  &__button
+    align-items: center
+    background-color: transparent
+    border: none
+    cursor: pointer
+    display: flex
+    height: 20px
+    justify-content: center
+    padding: 0
+    width: 20px
+
+    &:not(:last-child)
+      margin-right: 12px
+
+  .person__info
+    font-size: 16px
+    line-height: 21px
+
+.comment-form
+  margin-left: 48px
+  margin-bottom: 16px
